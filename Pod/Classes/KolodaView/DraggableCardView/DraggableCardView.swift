@@ -439,10 +439,11 @@ public class DraggableCardView: UIView, UIGestureRecognizerDelegate {
             layer.pop_add(swipeRotationAnimation, forKey: "swipeRotationAnimation")
             
             overlayView?.overlayState = direction
-            let overlayAlphaAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
-            overlayAlphaAnimation?.toValue = 1.0
-            overlayAlphaAnimation?.duration = cardSwipeActionAnimationDuration
-            overlayView?.pop_add(overlayAlphaAnimation, forKey: "swipeOverlayAnimation")
+            overlayView?.alpha = 1.0
+//             let overlayAlphaAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+//             overlayAlphaAnimation?.toValue = 1.0
+//             overlayAlphaAnimation?.duration = cardSwipeActionAnimationDuration
+//             overlayView?.pop_add(overlayAlphaAnimation, forKey: "swipeOverlayAnimation")
         }
     }
 }
